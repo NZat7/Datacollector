@@ -9,7 +9,7 @@ ESP8266WebServer server(80);
 
 void handleRoot() {
   String html = "<html><body>";
-  html += "<h2>ESP-01 LED Sequence Controller</h2>";
+  html += "<h2>DACO CONTROL</h2>";
   html += "<form action='/run' method='POST'>";
   html += "Sequence (e.g., 10101): <input type='text' name='seq'>";
   html += "<input type='submit' value='Send'>";
