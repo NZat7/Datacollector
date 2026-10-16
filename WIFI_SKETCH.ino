@@ -1,9 +1,11 @@
+
+//code for the esp8266 01 to host a website and send data serially to the Arduino
+
 #include <ESP8266WiFi.h>
 #include <ESP8266WebServer.h>
 
-// Replace with your network credentials
-const char* ssid = "YOUR_SSID";
-const char* password = "YOUR_PASSWORD";
+const char* ssid = "YOUR_SSID"; //Replace with network name
+const char* password = "YOUR_PASSWORD"; //Replace with network password
 
 ESP8266WebServer server(80);
 
@@ -21,7 +23,6 @@ void handleRoot() {
 void handleRun() {
   if (server.hasArg("seq")) {
     String sequence = server.arg("seq");
-    // Send the sequence out over Serial to the Arduino
     Serial.println(sequence);
     server.send(200, "text/html", "Sequence sent: " + sequence + "<br><a href='/'>Back</a>");
   } else {
