@@ -1,11 +1,11 @@
 
-//code for the esp8266 01 to host a website and send data serially to the Arduino
+// code for the esp8266 01 to host a website and send data serially to the Arduino
 
 #include <ESP8266WiFi.h>
 #include <ESP8266WebServer.h>
 
-const char* ssid = "YOUR_SSID"; //Replace with network name
-const char* password = "YOUR_PASSWORD"; //Replace with network password
+const char* ssid = "YOUR_SSID"; // Replace with network name
+const char* password = "YOUR_PASSWORD"; // Replace with network password
 
 ESP8266WebServer server(80);
 
