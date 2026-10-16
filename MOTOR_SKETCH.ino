@@ -23,7 +23,7 @@ void loop() {
   if (Serial.available() > 0) {
     char incomingChar = Serial.read();
 
-    if (incomingChar == '0') { //Go forward
+    if (incomingChar == '0') { // Go forward
       Serial.println("Both Motors ON");
       digitalWrite(motor1pin1, HIGH);
       digitalWrite(motor1pin2, LOW);
@@ -31,7 +31,7 @@ void loop() {
       digitalWrite(motor2pin2, LOW);
       delay(2000);
     } 
-    else if (incomingChar == '1') { //Go right
+    else if (incomingChar == '1') { // Go right
       Serial.println("Motor 1 ON");
       digitalWrite(motor1pin1, HIGH);
       digitalWrite(motor1pin2, LOW);
@@ -39,7 +39,7 @@ void loop() {
       digitalWrite(motor2pin2, LOW);
       delay(2000);
     } 
-    else if (incomingChar == '2') { //Go left
+    else if (incomingChar == '2') { // Go left
       Serial.println("Motor 2 ON");
       digitalWrite(motor1pin1, LOW);
       digitalWrite(motor1pin2, LOW);
@@ -47,7 +47,7 @@ void loop() {
       digitalWrite(motor2pin2, LOW);
       delay(2000);
     }
-    else if (incomingChar == '3') { //Go backwards 
+    else if (incomingChar == '3') { // Go backwards 
       Serial.println("Motor 2 ON");
       digitalWrite(motor1pin1, LOW);
       digitalWrite(motor1pin2, HIGH);
@@ -56,7 +56,7 @@ void loop() {
       delay(2000);
     }
 
-    // Stop both motors after the 2-second action finishes
+    // Stop both motors after the command has been executed 
     digitalWrite(motor1pin1, LOW);
     digitalWrite(motor1pin2, LOW);
     digitalWrite(motor2pin1, LOW);
