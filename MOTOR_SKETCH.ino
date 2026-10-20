@@ -1,3 +1,8 @@
+#include <Servo.h>
+
+Servo servo1;
+int servoPin = 11;
+
 int motor1pin1 = 2;
 int motor1pin2 = 3;
 
@@ -5,6 +10,9 @@ int motor2pin1 = 4;
 int motor2pin2 = 5;
 
 void setup() {
+  servo1.attach(servoPin);
+  servo1.write(0);
+
   pinMode(motor1pin1, OUTPUT);
   pinMode(motor1pin2, OUTPUT);
   pinMode(motor2pin1, OUTPUT);
@@ -55,6 +63,22 @@ void loop() {
       digitalWrite(motor2pin2, HIGH);
       delay(2000);
     }
+    else if (incomingChar == '4') { // Go backwards 
+      Serial.println("Sensor in Use");
+  
+  // 1. Move SLOWLY from 0 to 180 degrees
+      for (int angle = 0; angle <= 180; angle++) {
+        servo1.write(angle);
+        delay(20); // Increase this number to make it even slower (e.g., 30 or 40)
+    }
+    delay(2000);
+
+    for (int angle = 180; angle >= 0; angle--) {
+      servo1.write(angle);
+      delay(20);
+    }
+ delay(2000);
+}
 
     // Stop both motors after the command has been executed 
     digitalWrite(motor1pin1, LOW);
