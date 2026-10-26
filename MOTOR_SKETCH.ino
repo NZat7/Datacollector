@@ -63,13 +63,12 @@ void loop() {
       digitalWrite(motor2pin2, HIGH);
       delay(2000);
     }
-    else if (incomingChar == '4') { // Go backwards 
+    else if (incomingChar == '4') { // Use sensor
       Serial.println("Sensor in Use");
-  
-  // 1. Move SLOWLY from 0 to 180 degrees
+      delay(2000);
       for (int angle = 0; angle <= 180; angle++) {
         servo1.write(angle);
-        delay(20); // Increase this number to make it even slower (e.g., 30 or 40)
+        delay(20);
     }
     delay(2000);
 
