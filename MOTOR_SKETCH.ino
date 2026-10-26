@@ -56,7 +56,7 @@ void loop() {
       delay(2000);
     }
     else if (incomingChar == '3') { // Go backwards 
-      Serial.println("Motor 2 ON");
+      Serial.println("Both Motors ON backwards");
       digitalWrite(motor1pin1, LOW);
       digitalWrite(motor1pin2, HIGH);
       digitalWrite(motor2pin1, LOW);
