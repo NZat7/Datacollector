@@ -19,7 +19,7 @@ float gyroZOffset = 0;
 bool isTurning = false;
 
 void setup() {
-  wire.begin();
+  Wire.begin();
 
   servo1.attach(servoPin);
   servo1.write(0);
