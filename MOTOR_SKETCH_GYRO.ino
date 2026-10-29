@@ -94,7 +94,7 @@ void loop() {
         timePrev = timeCur;
 
         float gyroZ = (mpu.getRotationZ() - gyroZOffset) / 131.0;
-        yaw += (gyroZ * dt); 
+        yaw += abs(gyroZ * dt); 
         
         delay(10); 
       }
