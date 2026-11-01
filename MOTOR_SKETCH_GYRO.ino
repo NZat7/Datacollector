@@ -55,6 +55,13 @@ void loop() {
     else if (incomingChar == '1') {
       // Go right
       Serial.println("Turning Right");
+      
+      digitalWrite(motor1pin1, LOW);
+      digitalWrite(motor1pin2, LOW);
+      digitalWrite(motor2pin1, LOW);
+      digitalWrite(motor2pin2, LOW);
+      delay(1000);
+
       yaw = 0;
       timePrev = millis();
       
@@ -76,10 +83,22 @@ void loop() {
         }
         delay(10);
       }
+      digitalWrite(motor1pin1, LOW);
+      digitalWrite(motor1pin2, LOW);
+      digitalWrite(motor2pin1, LOW);
+      digitalWrite(motor2pin2, LOW);
+      delay(1000);
     } 
     else if (incomingChar == '2') {
       // Go left
       Serial.println("Turning Left");
+
+      digitalWrite(motor1pin1, LOW);
+      digitalWrite(motor1pin2, LOW);
+      digitalWrite(motor2pin1, LOW);
+      digitalWrite(motor2pin2, LOW);
+      delay(1000);
+
       yaw = 0;
       timePrev = millis();
       
@@ -101,10 +120,21 @@ void loop() {
         }
         delay(10);
       }
+      digitalWrite(motor1pin1, LOW);
+      digitalWrite(motor1pin2, LOW);
+      digitalWrite(motor2pin1, LOW);
+      digitalWrite(motor2pin2, LOW);
+      delay(1000);
     } 
     else if (incomingChar == '3') {
       // Go backwards
       Serial.println("Both Motors ON backwards");
+      digitalWrite(motor1pin1, LOW);
+      digitalWrite(motor1pin2, LOW);
+      digitalWrite(motor2pin1, LOW);
+      digitalWrite(motor2pin2, LOW);
+      delay(1000);
+
       digitalWrite(motor1pin1, LOW);
       digitalWrite(motor1pin2, HIGH);
       digitalWrite(motor2pin1, LOW);
@@ -126,6 +156,7 @@ void loop() {
       }
       delay(2000);
     }
+    
     
     // Stop both motors after the command has been executed
     digitalWrite(motor1pin1, LOW);
