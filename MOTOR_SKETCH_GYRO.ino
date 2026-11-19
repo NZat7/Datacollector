@@ -60,7 +60,7 @@ void loop() {
       digitalWrite(motor1pin2, LOW);
       digitalWrite(motor2pin1, LOW);
       digitalWrite(motor2pin2, LOW);
-      delay(1000);
+      delay(700);
 
       yaw = 0;
       timePrev = millis();
@@ -87,7 +87,7 @@ void loop() {
       digitalWrite(motor1pin2, LOW);
       digitalWrite(motor2pin1, LOW);
       digitalWrite(motor2pin2, LOW);
-      delay(1000);
+      delay(700);
     } 
     else if (incomingChar == '2') {
       // Go left
@@ -97,7 +97,7 @@ void loop() {
       digitalWrite(motor1pin2, LOW);
       digitalWrite(motor2pin1, LOW);
       digitalWrite(motor2pin2, LOW);
-      delay(1000);
+      delay(700);
 
       yaw = 0;
       timePrev = millis();
@@ -124,7 +124,7 @@ void loop() {
       digitalWrite(motor1pin2, LOW);
       digitalWrite(motor2pin1, LOW);
       digitalWrite(motor2pin2, LOW);
-      delay(1000);
+      delay(700);
     } 
     else if (incomingChar == '3') {
       // Go backwards
@@ -139,7 +139,7 @@ void loop() {
     else if (incomingChar == '4') {
       // Use sensor
       Serial.println("Sensor in Use");
-      delay(2000);
+      delay(1000);
       for (int angle = 0; angle <= 180; angle++) {
         servo1.write(angle);
         delay(20);
@@ -149,7 +149,7 @@ void loop() {
         servo1.write(angle);
         delay(20);
       }
-      delay(2000);
+      delay(1000);
     }
     
     
