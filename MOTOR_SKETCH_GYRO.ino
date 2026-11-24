@@ -140,12 +140,12 @@ void loop() {
       // Use sensor
       Serial.println("Sensor in Use");
       delay(1000);
-      for (int angle = 0; angle <= 180; angle++) {
+      for (int angle = 0; angle <= 90; angle++) {
         servo1.write(angle);
         delay(20);
       }
       delay(2000);
-      for (int angle = 180; angle >= 0; angle--) {
+      for (int angle = 90; angle >= 0; angle--) {
         servo1.write(angle);
         delay(20);
       }
