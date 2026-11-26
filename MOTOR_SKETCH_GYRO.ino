@@ -26,8 +26,8 @@ void setup() {
   
   pinMode(9, OUTPUT);
   pinMode(10, OUTPUT);
-  digitalWrite(9, HIGH);
-  digitalWrite(10, HIGH);
+  analogWrite(9, HIGH);
+  analogWrite(10, HIGH);
   
   mpu.initialize();
   long gyroZSum = 0;
@@ -64,7 +64,8 @@ void loop() {
 
       yaw = 0;
       timePrev = millis();
-      
+      analogWrite(9, 255);
+      analogWrite(10, 165);
       digitalWrite(motor1pin1, HIGH);
       digitalWrite(motor1pin2, LOW);
       digitalWrite(motor2pin1, LOW);
