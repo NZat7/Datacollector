@@ -27,7 +27,7 @@ void setup() {
   pinMode(9, OUTPUT);
   pinMode(10, OUTPUT);
   analogWrite(9, HIGH);
-  analogWrite(10, HIGH);
+  analogWrite(10, 150);
   
   mpu.initialize();
   long gyroZSum = 0;
