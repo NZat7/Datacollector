@@ -64,8 +64,6 @@ void loop() {
 
       yaw = 0;
       timePrev = millis();
-      analogWrite(9, 255);
-      analogWrite(10, 165);
       digitalWrite(motor1pin1, HIGH);
       digitalWrite(motor1pin2, LOW);
       digitalWrite(motor2pin1, LOW);
