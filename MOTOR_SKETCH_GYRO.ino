@@ -24,11 +24,6 @@ void setup() {
   pinMode(motor2pin1, OUTPUT);
   pinMode(motor2pin2, OUTPUT);
   
-  pinMode(9, OUTPUT);
-  pinMode(10, OUTPUT);
-  analogWrite(9, HIGH);
-  analogWrite(10, 150);
-  
   mpu.initialize();
   long gyroZSum = 0;
   for (int i = 0; i < 100; i++) {
