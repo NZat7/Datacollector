@@ -124,8 +124,8 @@ void loop() {
       // Go backwards
       Serial.println("Both Motors ON backwards");
 
-      digitalWrite(motor1pin1, LOW);
-      digitalWrite(motor1pin2, HIGH);
+      digitalWrite(motor1pin1, HIGH);
+      digitalWrite(motor1pin2, LOW);
       digitalWrite(motor2pin1, LOW);
       digitalWrite(motor2pin2, HIGH);
       delay(2000);
